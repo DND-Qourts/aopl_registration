@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080a0c">
+<meta name="referrer" content="no-referrer">
+<title>ALL-OUT Pickleball League — Payment</title>
+<style>
+:root{
+  --bg:#080a0c;--panel:#111419;--line:#282e36;--text:#f7f4ef;--muted:#98a0aa;
+  --accent:#ff4f3b;--accent2:#ff6b56;--green:#61d38b;--amber:#ffbb55;--blue:#1677ff;--orange:#ed6b1a;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 8% 0%,rgba(255,79,59,.075),transparent 26%),linear-gradient(180deg,#0a0c0f 0%,#07090b 55%,#080a0c 100%);color:var(--text);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}button,input{font:inherit}button{-webkit-tap-highlight-color:transparent}.page{width:min(1140px,calc(100% - 30px));margin:0 auto;padding:18px 0 64px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px;border-bottom:1px solid rgba(255,255,255,.08)}.brand{display:flex;align-items:center;gap:18px;min-width:0}.brand-main{width:168px;max-width:42vw;display:block}.brand-org{display:flex;align-items:center;gap:10px;padding-left:18px;border-left:1px solid rgba(255,255,255,.12)}.brand-org small{display:block;font-size:9px;letter-spacing:.16em;color:#7f8790;margin-bottom:3px}.brand-org img{width:88px;display:block}.secure{display:flex;align-items:center;gap:8px;color:#8d959f;font-size:12px;white-space:nowrap}.secure-dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(97,211,139,.1)}
+.intro{padding:32px 0 18px;display:grid;grid-template-columns:1.2fr .8fr;gap:26px;align-items:end}.eyebrow{margin:0 0 9px;color:var(--accent);font-size:11px;letter-spacing:.17em;font-weight:900}h1{margin:0;font-size:clamp(34px,5vw,58px);line-height:.98;letter-spacing:-.048em;max-width:660px}.intro-copy{margin:16px 0 0;color:#b9bec5;line-height:1.65;max-width:650px;font-size:15px}.amount-panel{border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,#14181d,#101317);padding:18px 20px}.amount-label{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#7e8792;font-weight:800}.amount{font-size:42px;letter-spacing:-.045em;font-weight:900;margin:5px 0 6px}.due{display:flex;align-items:center;justify-content:space-between;gap:12px;color:#b5bbc3;font-size:12px;padding-top:12px;border-top:1px solid #292f36}.due strong{color:#ffd194}
+.reg-strip{margin:10px 0 24px;border:1px solid var(--line);border-radius:16px;background:#101318;display:grid;grid-template-columns:1.45fr .7fr .8fr;overflow:hidden}.reg-item{padding:13px 16px;border-right:1px solid var(--line)}.reg-item:last-child{border-right:0}.reg-item span{display:block;color:#7d8590;font-size:9px;font-weight:850;letter-spacing:.13em;text-transform:uppercase;margin-bottom:6px}.reg-item b{font-size:13px;line-height:1.2}.status-pill{display:inline-flex!important;align-items:center;gap:6px;color:#ff9a88!important;background:rgba(255,79,59,.11);border:1px solid rgba(255,79,59,.2);border-radius:999px;padding:6px 9px;font-size:11px!important;text-transform:none!important;letter-spacing:0!important}.status-pill::before{content:"";width:6px;height:6px;background:var(--accent);border-radius:50%}
+.workspace{display:grid;grid-template-columns:minmax(0,1fr) 390px;gap:22px;align-items:start}.main-card,.qr-card{border:1px solid var(--line);background:var(--panel);border-radius:20px}.main-card{padding:22px}.qr-card{padding:18px;position:sticky;top:18px}.section-kicker{font-size:10px;color:#737c87;letter-spacing:.15em;font-weight:900;text-transform:uppercase;margin-bottom:6px}h2{font-size:24px;letter-spacing:-.025em;margin:0}.helper{margin:7px 0 20px;color:#979fa9;line-height:1.55;font-size:13px}.method-tabs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}.method-btn{border:1px solid #303740;background:#11151a;color:#d8dde3;border-radius:14px;padding:12px 13px;display:flex;align-items:center;justify-content:space-between;gap:10px;cursor:pointer;text-align:left}.method-btn:hover{border-color:#47505a}.method-btn.active{border-color:rgba(255,79,59,.62);background:rgba(255,79,59,.055);box-shadow:0 0 0 2px rgba(255,79,59,.075)}.method-name{display:flex;align-items:center;gap:9px;font-weight:850;font-size:14px}.brand-dot{width:10px;height:10px;border-radius:50%}.gcash-dot{background:var(--blue)}.mari-dot{background:var(--orange)}.check{width:18px;height:18px;border-radius:50%;border:2px solid #55606c;display:grid;place-items:center}.active .check{border-color:var(--accent);background:var(--accent)}.active .check::after{content:"";width:5px;height:8px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg);margin-top:-2px}.payee-card{border-top:1px solid var(--line);padding-top:17px}.payee-label{font-size:9px;letter-spacing:.13em;color:#7d8590;text-transform:uppercase;font-weight:850}.payee-name{font-size:19px;font-weight:900;margin:4px 0 2px}.payee-note{color:#8d96a0;font-size:11px;margin-bottom:14px}.qr-shell{background:#fff;border-radius:17px;padding:18px;display:grid;place-items:center;box-shadow:0 10px 35px rgba(0,0,0,.22);cursor:zoom-in}.qr-shell img{width:min(100%,310px);aspect-ratio:1/1;object-fit:contain;display:block}.qr-actions{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:12px;color:#88919b;font-size:11px}.qr-actions button{border:0;background:transparent;color:#d4d9df;font-weight:750;cursor:pointer;padding:6px 0}.amount-reminder{margin-top:14px;border-radius:13px;padding:12px 13px;background:rgba(255,187,85,.07);border:1px solid rgba(255,187,85,.18);font-size:12px;color:#d8c19b;line-height:1.5}.amount-reminder strong{color:#ffd28f}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:11px;color:#b7bdc5;font-weight:750}.textbox{width:100%;background:#0c0f12;border:1px solid #2d343c;color:#f6f4ef;border-radius:12px;padding:13px 14px;outline:0}.textbox:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(255,79,59,.08)}.textbox[readonly]{color:#c5cad0;background:#101318}.validation{min-height:15px;color:#ff907f;font-size:11px;margin-top:5px}.upload{min-height:150px;border:1px dashed #454d57;border-radius:15px;background:#0d1013;display:grid;place-items:center;padding:18px;cursor:pointer;transition:.16s ease;overflow:hidden}.upload:hover{border-color:#6b7580;background:#0f1216}.upload-inner{text-align:center}.upload-icon{width:36px;height:36px;border-radius:11px;background:#181d22;border:1px solid #303741;display:grid;place-items:center;margin:0 auto 10px;color:#fff;font-size:20px}.upload strong{display:block;font-size:13px}.upload small{display:block;color:#818a95;margin-top:5px;font-size:11px}.preview-wrap{display:none;width:100%;align-items:center;gap:14px}.preview-wrap.show{display:flex}.proof-thumb{width:90px;height:90px;border-radius:12px;object-fit:cover;background:#fff;border:1px solid #30363d}.file-meta{min-width:0;flex:1}.file-name{font-size:13px;font-weight:850;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.file-sub{color:#848d98;font-size:11px;margin-top:5px}.replace{border:0;background:transparent;color:#ff907f;font-weight:800;padding:6px 0;cursor:pointer;margin-top:7px}.correction{display:none;margin:0 0 18px;padding:13px 14px;border:1px solid rgba(255,187,85,.25);background:rgba(255,187,85,.08);border-radius:13px;color:#e4c998;font-size:12px;line-height:1.55}.correction.show{display:block}.correction b{color:#ffd28f}.confirm-line{margin:18px 0;padding:13px 14px;border:1px solid #2a3138;background:#101419;border-radius:13px;color:#b7bec6;font-size:12px;line-height:1.55}.confirm-line b{color:#fff}.submit-row{display:flex;justify-content:flex-end}.primary{appearance:none;border:0;border-radius:12px;padding:14px 18px;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#fff;font-weight:900;cursor:pointer;box-shadow:0 12px 30px rgba(255,79,59,.18)}.primary:disabled{opacity:.4;cursor:not-allowed;box-shadow:none}.submit-error{display:none;margin:0 0 12px;padding:11px 13px;border-radius:11px;background:rgba(255,79,59,.08);border:1px solid rgba(255,79,59,.22);color:#ff9a8b;font-size:12px;line-height:1.5}.submit-error.show{display:block}.disclaimer{font-size:10px;color:#68717c;text-align:right;margin-top:8px}.loading,.state-card{border:1px solid var(--line);background:#111419;border-radius:20px;padding:34px 24px;text-align:center;margin-top:28px}.spinner{width:30px;height:30px;border:3px solid #2a3037;border-top-color:var(--accent);border-radius:50%;margin:0 auto 14px;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}.state-icon{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;margin:0 auto 16px;font-size:25px;font-weight:900;background:rgba(255,255,255,.05);border:1px solid #30363d}.state-card h2{font-size:28px}.state-card p{color:#a1a8b1;line-height:1.6;max-width:540px;margin:10px auto}.state-details{max-width:560px;margin:20px auto 0;border:1px solid #2a3138;border-radius:14px;overflow:hidden;text-align:left}.detail-row{display:flex;justify-content:space-between;gap:20px;padding:11px 13px;border-bottom:1px solid #293038;font-size:12px}.detail-row:last-child{border-bottom:0}.detail-row span{color:#7f8893}.detail-row b{text-align:right}.state-good .state-icon{background:rgba(97,211,139,.1);border-color:rgba(97,211,139,.28);color:var(--green)}.state-warn .state-icon{background:rgba(255,187,85,.08);border-color:rgba(255,187,85,.25);color:var(--amber)}.state-error .state-icon{background:rgba(255,79,59,.08);border-color:rgba(255,79,59,.25);color:#ff8c7b}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.72);display:none;align-items:center;justify-content:center;padding:18px;z-index:50;backdrop-filter:blur(4px)}.overlay.show{display:flex}.modal{width:min(460px,100%);background:#111419;border:1px solid #313841;border-radius:20px;padding:20px;box-shadow:0 30px 90px rgba(0,0,0,.5)}.modal h3{margin:0 0 8px;font-size:22px}.modal p{color:#9fa7b0;font-size:13px;line-height:1.55}.confirm-grid{margin:16px 0;border:1px solid #293038;border-radius:13px;overflow:hidden}.confirm-row{display:flex;justify-content:space-between;gap:20px;padding:11px 13px;border-bottom:1px solid #293038;font-size:12px}.confirm-row:last-child{border-bottom:0}.confirm-row span{color:#7f8893}.modal-actions{display:flex;justify-content:flex-end;gap:10px}.secondary{border:1px solid #343c45;background:#161a1f;color:#d5d9df;border-radius:11px;padding:11px 14px;font-weight:750;cursor:pointer}.qr-lightbox{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;padding:24px;z-index:60}.qr-lightbox.show{display:flex}.qr-lightbox img{width:min(620px,90vw);height:min(620px,90vw);object-fit:contain;background:#fff;padding:24px;border-radius:18px}footer{margin-top:34px;padding-top:18px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;gap:15px;color:#747d88;font-size:11px}.hidden{display:none!important}
+@media(max-width:900px){.intro{grid-template-columns:1fr}.workspace{grid-template-columns:1fr}.qr-card{position:static;order:-1}.reg-strip{grid-template-columns:1fr 1fr}.reg-item:nth-child(2){border-right:0}.reg-item:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media(max-width:600px){.page{width:min(100% - 20px,1140px);padding-top:8px}.topbar{min-height:66px}.brand-main{width:145px}.brand-org{display:none}.secure{font-size:10px}.intro{padding:26px 0 16px}h1{font-size:39px}.intro-copy{font-size:14px}.amount-panel{padding:15px 16px}.amount{font-size:38px}.due{align-items:flex-start;flex-direction:column;gap:5px}.reg-strip{grid-template-columns:1fr}.reg-item{border-right:0;border-bottom:1px solid var(--line)}.reg-item:last-child{border-bottom:0}.main-card,.qr-card{border-radius:16px}.main-card{padding:17px}.qr-card{padding:15px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.qr-shell img{width:min(100%,290px)}.submit-row{display:block}.primary{width:100%}.disclaimer{text-align:center}footer{flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="topbar">
+    <div class="brand">
+      <a href="../" aria-label="ALL-OUT home"><img class="brand-main" src="./assets/allout-logo.png" alt="ALL-OUT Pickleball League"></a>
+      <div class="brand-org"><div><small>ORGANIZED BY</small><img src="./assets/dnd-logo.png" alt="Day & Night Dinkers"></div></div>
+    </div>
+    <div class="secure"><span class="secure-dot"></span> Secure payment submission</div>
+  </header>
+
+  <div id="loading" class="loading"><div class="spinner"></div><div>Loading secure payment session…</div></div>
+  <div id="stateHost"></div>
+
+  <div id="paymentApp" class="hidden">
+    <section class="intro">
+      <div>
+        <p class="eyebrow">PAYMENT REQUIRED</p>
+        <h1>Pay <span id="heroAmount">₱7,000</span>.<br>Submit your proof.</h1>
+        <p class="intro-copy">Your team has been approved for payment. Any registered player may complete the team payment, but the registration fee must be paid in full.</p>
+      </div>
+      <div class="amount-panel">
+        <div class="amount-label">Amount due</div>
+        <div class="amount" id="amountDue">₱7,000</div>
+        <div class="due"><span id="deadlineExact">24-hour payment window</span><strong id="deadlineCountdown">Calculating…</strong></div>
+      </div>
+    </section>
+
+    <section class="reg-strip">
+      <div class="reg-item"><span>Team</span><b id="teamName">—</b></div>
+      <div class="reg-item"><span>Division</span><b id="divisionName">—</b></div>
+      <div class="reg-item"><span>Status</span><b class="status-pill" id="statusLabel">Approved for Payment</b></div>
+    </section>
+
+    <section class="workspace">
+      <div class="main-card">
+        <div class="section-kicker">STEP 2 OF 2</div>
+        <h2>Submit payment proof</h2>
+        <p class="helper">After sending the full amount, enter your Registration ID and transaction reference, then upload the payment receipt.</p>
+
+        <div class="correction" id="correctionBox"><b>Correction required.</b> <span id="correctionReason"></span></div>
+
+        <div class="form-grid">
+          <div class="field">
+            <label for="regId">Registration ID</label>
+            <input class="textbox" id="regId" type="text" placeholder="AOPL-16-000036" autocomplete="off" autocapitalize="characters">
+            <div class="validation" id="regValidation"></div>
+          </div>
+          <div class="field">
+            <label for="selectedMethod">Payment method</label>
+            <input class="textbox" id="selectedMethod" type="text" value="GCash" readonly>
+            <div class="validation"></div>
+          </div>
+          <div class="field full">
+            <label for="refNo">Payment Reference Number</label>
+            <input class="textbox" id="refNo" type="text" placeholder="Enter transaction / reference number" autocomplete="off">
+            <div class="validation" id="refValidation"></div>
+          </div>
+          <div class="field full">
+            <label>Proof of Payment</label>
+            <div class="upload" id="uploadBox" tabindex="0" role="button" aria-label="Upload proof of payment">
+              <div class="upload-inner" id="uploadEmpty"><div class="upload-icon">↑</div><strong>Upload proof of payment</strong><small>PNG, JPG, WebP or PDF · max 5 MB</small></div>
+              <div class="preview-wrap" id="previewWrap"><img class="proof-thumb" id="proofThumb" alt=""><div class="file-meta"><div class="file-name" id="fileName"></div><div class="file-sub" id="fileSub"></div><button class="replace" type="button" id="replaceBtn">Replace file</button></div></div>
+              <input id="fileInput" type="file" hidden accept=".png,.jpg,.jpeg,.webp,.pdf,image/png,image/jpeg,image/webp,application/pdf">
+            </div>
+            <div class="validation" id="fileValidation"></div>
+          </div>
+        </div>
+
+        <div class="confirm-line">You are submitting a <b id="confirmAmount">₱7,000 team payment</b> for <b id="confirmTeam">this team</b>. Only one active payment submission is allowed per registration.</div>
+        <div class="submit-error" id="submitError"></div><div class="submit-row"><button class="primary" id="submitBtn" type="button" disabled>Submit Payment Proof</button></div>
+        <div class="disclaimer">Your proof is stored privately and is visible only to authorized organizers.</div>
+      </div>
+
+      <aside class="qr-card">
+        <div class="section-kicker">STEP 1 OF 2</div>
+        <h2>Choose how to pay</h2>
+        <p class="helper">Select one payment channel. Only the selected QR is shown.</p>
+        <div class="method-tabs">
+          <button class="method-btn active" type="button" data-method="GCash" data-name="JHONNY CAGARA" data-qr="./assets/gcash-qr.png"><span class="method-name"><span class="brand-dot gcash-dot"></span>GCash</span><span class="check"></span></button>
+          <button class="method-btn" type="button" data-method="MariBank" data-name="RIZA ELL AGAPITO" data-qr="./assets/maribank-qr.png"><span class="method-name"><span class="brand-dot mari-dot"></span>MariBank</span><span class="check"></span></button>
+        </div>
+        <div class="payee-card">
+          <div class="payee-label">Send payment to</div><div class="payee-name" id="payeeName">JHONNY CAGARA</div><div class="payee-note" id="payeeMethod">GCash · InstaPay QR</div>
+          <div class="qr-shell" id="qrShell" title="Click to enlarge"><img id="qrImage" src="./assets/gcash-qr.png" alt="GCash InstaPay QR"></div>
+          <div class="qr-actions"><span>Tap QR to enlarge</span><button type="button" id="enlargeBtn">View full screen</button></div>
+          <div class="amount-reminder">Send exactly <strong id="qrAmount">₱7,000</strong>. After payment, return here and submit the transaction reference and proof.</div>
+        </div>
+      </aside>
+    </section>
+  </div>
+
+  <footer><span>ALL-OUT Pickleball League · November 14, 2026</span><span>Official Match Control — Qourts</span></footer>
+</div>
+
+<div class="overlay" id="confirmOverlay" aria-hidden="true"><div class="modal"><h3>Submit this payment?</h3><p>Check the details before sending the proof for organizer verification.</p><div class="confirm-grid"><div class="confirm-row"><span>Registration</span><b id="modalReg"></b></div><div class="confirm-row"><span>Method</span><b id="modalMethod"></b></div><div class="confirm-row"><span>Amount expected</span><b id="modalAmount"></b></div><div class="confirm-row"><span>Reference</span><b id="modalRef"></b></div></div><div class="modal-actions"><button class="secondary" id="cancelModal" type="button">Go back</button><button class="primary" id="confirmSubmit" type="button">Confirm Submission</button></div></div></div>
+<div class="qr-lightbox" id="qrLightbox" aria-hidden="true"><img id="qrLarge" src="./assets/gcash-qr.png" alt="Payment QR enlarged"></div>
+
+<script>
+window.ALL_OUT_PAYMENT_CONFIG={
+  statusEndpoint:'https://jsxevtkvoqihldwmngit.supabase.co/functions/v1/payment-status',
+  submitEndpoint:'https://jsxevtkvoqihldwmngit.supabase.co/functions/v1/submit-payment'
+};
+</script>
+<script>
+(()=>{
+  'use strict';
+  const CONFIG=window.ALL_OUT_PAYMENT_CONFIG||{};
+  const qs=new URLSearchParams(location.search);
+  const state={reference:(qs.get('reference')||'').trim().toUpperCase(),token:(qs.get('token')||'').trim(),snapshot:null,selectedMethod:'GCash',file:null,serverOffsetMs:0,countdownTimer:null};
+  const $=s=>document.querySelector(s); const $$=s=>[...document.querySelectorAll(s)];
+  const els={loading:$('#loading'),stateHost:$('#stateHost'),app:$('#paymentApp'),heroAmount:$('#heroAmount'),amountDue:$('#amountDue'),deadlineExact:$('#deadlineExact'),deadlineCountdown:$('#deadlineCountdown'),teamName:$('#teamName'),divisionName:$('#divisionName'),statusLabel:$('#statusLabel'),regId:$('#regId'),regValidation:$('#regValidation'),selectedMethod:$('#selectedMethod'),refNo:$('#refNo'),refValidation:$('#refValidation'),fileInput:$('#fileInput'),uploadBox:$('#uploadBox'),uploadEmpty:$('#uploadEmpty'),previewWrap:$('#previewWrap'),proofThumb:$('#proofThumb'),fileName:$('#fileName'),fileSub:$('#fileSub'),replaceBtn:$('#replaceBtn'),fileValidation:$('#fileValidation'),confirmAmount:$('#confirmAmount'),confirmTeam:$('#confirmTeam'),submitBtn:$('#submitBtn'),submitError:$('#submitError'),correctionBox:$('#correctionBox'),correctionReason:$('#correctionReason'),payeeName:$('#payeeName'),payeeMethod:$('#payeeMethod'),qrImage:$('#qrImage'),qrLarge:$('#qrLarge'),qrShell:$('#qrShell'),enlargeBtn:$('#enlargeBtn'),qrAmount:$('#qrAmount'),confirmOverlay:$('#confirmOverlay'),cancelModal:$('#cancelModal'),confirmSubmit:$('#confirmSubmit'),modalReg:$('#modalReg'),modalMethod:$('#modalMethod'),modalAmount:$('#modalAmount'),modalRef:$('#modalRef'),qrLightbox:$('#qrLightbox')};
+
+  const money=n=>new Intl.NumberFormat('en-PH',{style:'currency',currency:'PHP',maximumFractionDigits:0}).format(Number(n||0));
+  const dt=v=>new Intl.DateTimeFormat('en-PH',{timeZone:'Asia/Manila',year:'numeric',month:'short',day:'numeric',hour:'numeric',minute:'2-digit',hour12:true}).format(new Date(v));
+  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+
+  function renderState(type,title,copy,rows=[]){
+    els.app.classList.add('hidden');
+    els.loading.classList.add('hidden');
+    const icon=type==='good'?'✓':type==='warn'?'!':'×';
+    els.stateHost.innerHTML=`<section class="state-card state-${type}"><div class="state-icon">${icon}</div><h2>${esc(title)}</h2><p>${esc(copy)}</p>${rows.length?`<div class="state-details">${rows.map(([k,v])=>`<div class="detail-row"><span>${esc(k)}</span><b>${esc(v)}</b></div>`).join('')}</div>`:''}</section>`;
+  }
+
+  async function api(url,options){
+    const res=await fetch(url,options); let data={}; try{data=await res.json();}catch{}
+    if(!res.ok){const e=new Error(data.message||'Request failed.');e.code=data.error;e.data=data;throw e;} return data;
+  }
+
+  async function loadSession(){
+    if(!state.reference||!state.token){renderState('warn','Use your secure payment link.','Open the “Pay Registration” button from the registration-approved email sent to your team. The secure link is required before payment can be submitted.');return;}
+    try{
+      const data=await api(CONFIG.statusEndpoint,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({reference:state.reference,token:state.token})});
+      state.snapshot=data.payment;
+      const serverNow=new Date(state.snapshot.serverNow).getTime(); state.serverOffsetMs=serverNow-Date.now();
+      renderSnapshot();
+    }catch(err){renderState('error','Payment link unavailable.',err.message||'This secure payment link is invalid or no longer active.');}
+  }
+
+  function renderSnapshot(){
+    const p=state.snapshot; els.loading.classList.add('hidden');
+    const amount=money(p.amountDue);
+    if(p.paymentStatus==='submitted'){
+      renderState('good','Payment submitted — awaiting verification.','Your team payment has already been submitted. No additional payment should be sent while the organizer reviews the proof.',[['Registration',p.reference],['Team',p.teamName],['Amount',amount],['Method',p.paymentMethod||'—'],['Payment Reference',p.paymentReference||'—'],['Submitted',p.paymentSubmittedAt?dt(p.paymentSubmittedAt):'—'],['Status','Awaiting Verification']]);return;
+    }
+    if(p.registrationStatus==='confirmed'||p.paymentStatus==='verified'){
+      renderState('good','Registration confirmed.','Your payment has been verified and your team registration is confirmed.',[['Registration',p.reference],['Team',p.teamName],['Division',p.divisionName||p.divisionCode],['Status','Confirmed']]);return;
+    }
+    if(p.registrationStatus==='payment_overdue'||p.paymentStatus==='overdue'){
+      renderState('warn','Payment deadline has passed.','Your team slot remains reserved while the organizer decides the next action. Please contact the organizer if you need an extension.',[['Registration',p.reference],['Team',p.teamName],['Amount',amount],['Deadline',p.dueAt?dt(p.dueAt):'—'],['Status','Payment Overdue']]);return;
+    }
+    if(!p.canSubmit){renderState('warn','Payment is not open.','This registration is not currently accepting a payment submission.',[['Registration',p.reference],['Team',p.teamName],['Status',String(p.registrationStatus||'Unavailable').replaceAll('_',' ')]]);return;}
+
+    els.app.classList.remove('hidden'); els.heroAmount.textContent=amount; els.amountDue.textContent=amount; els.teamName.textContent=p.teamName; els.divisionName.textContent=p.divisionName||p.divisionCode; els.statusLabel.textContent=p.paymentStatus==='rejected'?'Correction Required':'Approved for Payment'; els.confirmAmount.textContent=`${amount} team payment`; els.confirmTeam.textContent=p.teamName; els.qrAmount.textContent=amount; els.modalAmount.textContent=amount; els.deadlineExact.textContent=p.dueAt?`Due ${dt(p.dueAt)}`:'Payment window active';
+    if(p.paymentStatus==='rejected'){els.correctionBox.classList.add('show');els.correctionReason.textContent=p.paymentRejectionReason||'The previous payment could not be verified. Please submit corrected payment details.';}
+    startCountdown(); validate();
+  }
+
+  function startCountdown(){
+    if(state.countdownTimer)clearInterval(state.countdownTimer);
+    const tick=()=>{const due=new Date(state.snapshot.dueAt).getTime();const now=Date.now()+state.serverOffsetMs;let ms=due-now;if(ms<=0){els.deadlineCountdown.textContent='Deadline passed';clearInterval(state.countdownTimer);setTimeout(loadSession,800);return;}const h=Math.floor(ms/3600000);const m=Math.floor((ms%3600000)/60000);els.deadlineCountdown.textContent=`Due in ${h}h ${m}m`;}; tick(); state.countdownTimer=setInterval(tick,30000);
+  }
+
+  function setMethod(btn){$$('.method-btn').forEach(m=>m.classList.toggle('active',m===btn));state.selectedMethod=btn.dataset.method;els.selectedMethod.value=state.selectedMethod;els.payeeName.textContent=btn.dataset.name;els.payeeMethod.textContent=state.selectedMethod+' · InstaPay QR';els.qrImage.src=btn.dataset.qr;els.qrLarge.src=btn.dataset.qr;els.qrImage.alt=state.selectedMethod+' InstaPay QR';}
+  $$('.method-btn').forEach(btn=>btn.addEventListener('click',()=>setMethod(btn)));
+
+  function validate(){
+    if(!state.snapshot)return; const typed=els.regId.value.trim().toUpperCase(); const regOk=typed===state.snapshot.reference; const refOk=els.refNo.value.trim().length>=4; const fileOk=!!state.file;
+    els.regValidation.textContent=typed&&!regOk?'Registration ID does not match this secure payment session.':''; els.refValidation.textContent=els.refNo.value&&!refOk?'Enter at least 4 characters.':''; els.submitBtn.disabled=!(regOk&&refOk&&fileOk&&state.snapshot.canSubmit);
+  }
+  els.regId.addEventListener('input',()=>{els.regId.value=els.regId.value.toUpperCase();validate();}); els.refNo.addEventListener('input',validate);
+
+  function chooseFile(){els.fileInput.click();}
+  els.uploadBox.addEventListener('click',e=>{if(e.target!==els.replaceBtn)chooseFile();}); els.uploadBox.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();chooseFile();}}); els.replaceBtn.addEventListener('click',e=>{e.stopPropagation();chooseFile();});
+  els.fileInput.addEventListener('change',()=>{const f=els.fileInput.files[0];if(!f)return;const allowed=['image/png','image/jpeg','image/webp','application/pdf'];if(!allowed.includes(f.type)){els.fileValidation.textContent='Use PNG, JPG, WebP, or PDF.';els.fileInput.value='';state.file=null;validate();return;}if(f.size>5*1024*1024){els.fileValidation.textContent='File must be 5 MB or smaller.';els.fileInput.value='';state.file=null;validate();return;}state.file=f;els.fileValidation.textContent='';els.fileName.textContent=f.name;els.fileSub.textContent=(f.size/1024/1024).toFixed(2)+' MB'+(f.type==='application/pdf'?' · PDF':'');if(f.type.startsWith('image/')){els.proofThumb.src=URL.createObjectURL(f);els.proofThumb.style.display='block';}else{els.proofThumb.removeAttribute('src');els.proofThumb.style.display='none';}els.uploadEmpty.style.display='none';els.previewWrap.classList.add('show');validate();});
+
+  els.submitBtn.addEventListener('click',()=>{els.modalReg.textContent=els.regId.value.trim().toUpperCase();els.modalMethod.textContent=state.selectedMethod;els.modalRef.textContent=els.refNo.value.trim();els.confirmOverlay.classList.add('show');els.confirmOverlay.setAttribute('aria-hidden','false');});
+  els.cancelModal.addEventListener('click',()=>{els.confirmOverlay.classList.remove('show');els.confirmOverlay.setAttribute('aria-hidden','true');});
+  els.confirmSubmit.addEventListener('click',submitPayment);
+
+  async function submitPayment(){
+    els.submitError.classList.remove('show');els.submitError.textContent='';els.confirmSubmit.disabled=true;els.confirmSubmit.textContent='Submitting…';
+    try{
+      const fd=new FormData();fd.append('reference',els.regId.value.trim().toUpperCase());fd.append('token',state.token);fd.append('method',state.selectedMethod);fd.append('paymentReference',els.refNo.value.trim());fd.append('proof',state.file,state.file.name);
+      const data=await api(CONFIG.submitEndpoint,{method:'POST',body:fd});
+      els.confirmOverlay.classList.remove('show'); state.snapshot={...state.snapshot,paymentStatus:'submitted',paymentMethod:data.payment.method,paymentReference:data.payment.paymentReference,paymentSubmittedAt:data.payment.submittedAt,canSubmit:false}; renderSnapshot();
+    }catch(err){els.confirmOverlay.classList.remove('show'); if(err.code==='PAYMENT_ALREADY_SUBMITTED'){await loadSession();return;} els.submitError.textContent=err.message||'Payment was not submitted. Please try again.';els.submitError.classList.add('show');els.submitError.scrollIntoView({behavior:'smooth',block:'center'});}
+    finally{els.confirmSubmit.disabled=false;els.confirmSubmit.textContent='Confirm Submission';}
+  }
+
+  function openQR(){els.qrLightbox.classList.add('show');els.qrLightbox.setAttribute('aria-hidden','false');} function closeQR(){els.qrLightbox.classList.remove('show');els.qrLightbox.setAttribute('aria-hidden','true');}
+  els.qrShell.addEventListener('click',openQR);els.enlargeBtn.addEventListener('click',openQR);els.qrLightbox.addEventListener('click',closeQR);document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeQR();els.confirmOverlay.classList.remove('show');}});
+
+  loadSession();
+})();
+</script>
+</body>
+</html>
