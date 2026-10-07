@@ -1,0 +1,81 @@
+/*
+  ALL-OUT — UNIFORM DUPR TITLE SYSTEM
+
+  This intentionally mirrors the existing Tournament Format DUPR 14 / DUPR 16
+  reference treatment. The SAME component is used everywhere.
+*/
+:root{
+  --dupr-number-font:Arial Black,"Helvetica Neue",Arial,sans-serif;
+  --dupr-number-color:#ff4b35;
+}
+
+/* One component used in Tournament Format, Home Availability and Register. */
+.dupr-uniform-title,
+.division-showcase-title-dupr{
+  display:flex!important;
+  align-items:center!important;
+  gap:14px!important;
+  min-height:72px!important;
+  line-height:1!important;
+  white-space:nowrap!important;
+}
+
+.dupr-uniform-title .dupr-wordmark,
+.division-showcase-title-dupr .dupr-wordmark{
+  display:block!important;
+  width:auto!important;
+  height:58px!important;
+  max-width:none!important;
+  object-fit:contain!important;
+  flex:0 0 auto!important;
+  transform:none!important;
+}
+
+.dupr-uniform-title strong,
+.division-showcase-title-dupr strong{
+  display:block!important;
+  margin:0!important;
+  padding:0!important;
+  font-family:var(--dupr-number-font)!important;
+  font-size:68px!important;
+  line-height:.82!important;
+  font-weight:900!important;
+  font-style:normal!important;
+  font-stretch:normal!important;
+  letter-spacing:-4.2px!important;
+  color:var(--dupr-number-color)!important;
+  transform:scaleX(.94)!important;
+  transform-origin:left center!important;
+}
+
+/* Cancel old availability/picker title rules so they cannot drift. */
+.availability-card .division-title.dupr-uniform-title,
+.division-option .option-title.dupr-uniform-title{
+  font-family:initial!important;
+  font-size:initial!important;
+  font-weight:initial!important;
+  letter-spacing:initial!important;
+  color:initial!important;
+}
+
+/* Exact same mobile reference treatment everywhere. */
+@media(max-width:620px){
+  .dupr-uniform-title,
+  .division-showcase-title-dupr{
+    gap:10px!important;
+    min-height:60px!important;
+  }
+
+  .dupr-uniform-title .dupr-wordmark,
+  .division-showcase-title-dupr .dupr-wordmark{
+    height:47px!important;
+  }
+
+  .dupr-uniform-title strong,
+  .division-showcase-title-dupr strong{
+    font-size:55px!important;
+    line-height:.81!important;
+    letter-spacing:-3.4px!important;
+    transform:scaleX(.95)!important;
+  }
+}
