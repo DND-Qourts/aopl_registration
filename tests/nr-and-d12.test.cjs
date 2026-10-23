@@ -202,3 +202,19 @@ test('a restored draft cannot select the closed DUPR 12', async () => {
   assert.strictEqual(await page.evaluate(() => document.body.classList.contains('division-selected')), false);
   await context.close();
 });
+
+test('shirt size 2XS can be chosen and is submitted', async () => {
+  const { page, calls, context } = await openWithRoster('?division=D14', ['3.40', '3.30', '3.20', '3.10'], {
+    functions: { 'submit-registration': { ok: true, reference: 'AOPL-TEST-0004' } }
+  });
+  await openPlayer(page, 2);
+  const options = await page.locator('[data-field="shirtSize"][data-player="2"] option').allInnerTexts();
+  assert.ok(options.includes('2XS'));
+  await page.selectOption('[data-field="shirtSize"][data-player="2"]', '2XS');
+  await page.click('#continueButton');
+  await page.check('#acknowledgeRules'); await page.check('#acknowledgeConsent');
+  await page.click('#continueButton'); await page.click('#continueButton');
+  await page.waitForSelector('#successPanel:not(.hidden)');
+  assert.strictEqual(calls.find(c => c.name === 'submit-registration').body.players[1].shirtSize, '2XS');
+  await context.close();
+});
