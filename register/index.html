@@ -2397,6 +2397,9 @@ dialog [data-rating-value],
   }
 }
 
+/* NR option under the rating field */
+.player-fields>small.field-hint[data-nr-note]{display:block;margin:-4px 0 4px;color:var(--muted);font-size:11px}
+.nr-select{margin-top:2px}
 </style>
 <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAASaUlEQVR4nO2de5BlVXXGv9W3ewB1JDwEiSSMRo2IlAkQKIchyERNFAgEwyCoiOCAIJKUSRVUUj4qKSqWsTCpQgYUBFNAghhm0MSAGExEHQMogpFHiRDF4ikYGDIw0933yx97rT67bz/uOeee0923/X5VXbfvuefss9d+rL322i9ACCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIcTQYAvxEpIGYGSh3tcSXTPr9ruJZMg5zLJOmhnnu8HzNP8bRthqxEl2AMDMJtt8z2KTVXCWqSTDjFfwETObWOy4NEErFcATiaFFSO4OYF8ALwPQaeOdLdJFSqf7zOy7JEfyQk6yk1dwki9DkvUlSJVimCBSnDeb2Y9JWpaHhlTwJ/37CgCvAfAbAF6wWBEekPHRpkPMCwTJIwGcCuBwALs1/a4F5lgA30WmNEJWkqMA3gHgPQAOAbByUWLYHPv5pwFgVuknSb4GwHoARwN41WJFsCFubLQFyArEfgAuAPCW/GckbTqvbbnE6CJpxB+Y2QE9GjFkPQLAJwEc0PPcsJlCk0it83VmdkIm34iZdUnuCOBjAM4BsFPPc8OUp0CKLwGsaawFIDlqZhMkTwJwCYAXISUOUHSAh838iUJxmX/vAJjICse5AD7uv00gyTiS/Q0TEedL4kJW+FcB+AKA3/GfJrL7hzVPbzGz2xqpAF4gJki+G8A/9LxoWCFS/J8E8I9+bTIr/H8F4MMoWrXGzckFJPLqTgD/4fY+vfDvDeDrAFYBGEeSc5hlBZKi2gA0oKWyAnEgkqaM5n+YCz9QtF5Xm9lT7tEacVmPRyr84xjOlm0uNritPwoAJMeQNP8qJFnHMLwuT6Aolw8BuJ6kNdFM0wvHxUgJFJ6EYaeD1NRf7N8NQJfkbgAuRNFCDHOBAAo5HgfwT3HNK8I5AN6AovAPO9Ev+5yZPQegM1BBdbu/C+AYAAdh+M2eYBKpYH/NzO52ty68A3wWgD38nuVQ0aOlu8rMnnatP0lyZwDnYnm05kBR0Z8D8Dm/1h00A6NGfRDD5wmYj9Dqof1HkArFTgDeh+XTygFFS3epfw9P1zqksYzlImsotS+b2U/ddK9fASIAkr8F4Hf98nLQFOH6/DGAG7xDGNr/aAC/nt0z7IT2v9lbug6AcW/x3o/lpdQivy6OPM0vDsIZHs5yme4QrdplZrYNqVLHtbMWJ0qtYgAu8v87XtEPRRrXCLNh2Alz9U4A/wkU03NqVQAfEJr0DuEJfnk5JFRk+LMAPh8Xs5buMAxeKGIQppv9P9dfm4Rtfz+Kli4q+pnZPcuBSMtLvM86lX91/blhN64DsDOA0JRLhbremUmkNNloZg+7SRCJFy3dBKqlW7iFw10a8aoSv3xkualBtjDjLjWzbSRXmNl2kr8K4EgkOemfS4G67uYYo/k5Ci/XlLVSuQK4pogO4V8iJeIONSK2FBlBSrCLYrqvD/DtjmotXWj4DmYW2K0AtqCoSGN+X35v/h2zhBFNel0XbLRiW1AMXEZF/zMAL64Z7lIklNrVZvaLmLEQP9ZpAQwpsX4NyZ6qY/u31V+IvsjBSBO6qnRWo1D9l5l9J1yfzskAdkE57R/vjIpyO4Ab/PMhJH/7Myh86zGyGs+MZp9j/rcSwKsBrAbwJqSOeP6uqkShuM7MHvGWbsIn9W0HcCWKVqssbc3zGvGwdwdwlL+jSrzCWokpHsvFrJsbkt9jYpLlmfDPkz2MUZJGcgeSPyoZXvy+leQGkge1INtKkmeTfNbf1a0gYx7PLslDPMylZL7OCsk/97iPV5BzwuW80cOYoSwqNaEs3Ee7ADgQM2tjXrvyjp5l38eRphVX1TD96CBptqMAbEQ17Rj3PgLg1Wb2LIvJfW8H8EX0H+SLMG4B8H4zuzt+YNKsecd2Lk05V3pMrbqK5tsr1yakNRZ1W7o3MFvfQPIwADvOIleez3mfJg/vHgBPlYxDVV4I4D4Ae6K6rB0Ax5rZ9ewxfyrjGQmSF9TQOsGXmDRro1onajfJf8tqf1lCq3w85MzC+4ZrkfnCC83/TZI79IbRsJzGtBgFJA/zuA/S0q3wMA+uEEYvzzFNmptVyw4ga5S3d/XEvQyRJvdnMtZXuPEwyV8h+bi/YMI/y/xFITvcw2msArAorPv6e6qYBV3/20byVR7OmCfYIf5bvwIW9xwQzzcl2xzyWibzvT0ZPh9xz8MkX+TPRyG7PEuHsnm6zZ+5xMNoS6l9y+NdR6mdl8s5SGQioU6vEZmwxe4gOcJBauL8cftUj/BVEup6D6NDz0iSV5YILwrV95kVzDZhoYx2Jvmov79MpQ85/safH/PPvUg+w0IZlCUqQlT8JpVa5MHBLKeEckKOLST38nBmzZcqmTXpgZzZ987ZMcwyEDEoTINyE0yTt97pl6uEH2nw6fjug3z7ADgO/Qe+ot+zyUdRF2KKRCiRNSjs4n5KJeTYhmKBTzxzMpKnaRLl+2Vh+3/TzL7H1Jdow7t3psepivcm5Jjycg20WQGTVjSSb8xqfpXaSJJPkNzFw2usBeBgLVPI8d8svD4R3vn+W7/WJLTT6/25hWgBQjteXjKO+T0bIwxW93LlRDqfkOdDQ/KF6RMtU6RzWZr1crFI8Gt7ErMMce/fexiNriaimx0sXJ917MSzPayw/VeSfIT9m9541x1swbSbS17/XMnC/Kli//+ePx+d9WN6ZClDhPUTkjtx0A7mTBlDCZ3r76nj+vyWhzGYQmJRG1cx9far2oldF2C/RiI0PW5RMQ/vyZiy8SLJn5Pc1cMJm3h9lpjzERnzEX+u9aWCmcxHVZA576eE5o9wvsr+Xq655P5Y03J73IzJczNIy3RimbiVKYxxz2lIPuKqdqIhTbf9IXv21GmQmKVZ1U4E0kKQpzyhJrxgnF0yjBh7uK7G+wfl7SjGVvoR4w4b3E4f837O/gDW+m9lzYR8Ycnlfq1JuWNG6h8AeCWqLTyaseQRg8w6yGrjC0k+NEBt/EMPrw07cR+mkde6LdO+Hk5o/7eUlDN+v50NmwDzyJybP49kcvSTkyQfY3IU5CbGhf5bHZP2Gg+jLdfnjf6eOi3TR3M556NfzYraeCyAvVGvNubTbZv0EkQ8TkXap6ZOy3STmd3jmRha7E/9s9+8lrj/Ok+jhZhO0PF0PALAS1FO5kjzK2PJo3vNdgVwYoRbIQ6R7hfNe1cNWGzDsh9Sy1QlXePerciWPPZ7qF9hzheCVJ3oFM9eambbUVSmgYnKRPIFAN7rl6v0LaLQXOifsbPF6wC8GeUSPsyf6/37Qpg/sd1kmD/90jPkGAfwGb8Wsp8EYFcU+xmVIRTgHQBuoa8LKR/9vkQeno40Wa9K2KEMNpnZQ2zQ9Vl3IIJMLqx5ByJqxi2a8HfUaCZDjrtZeH0ivA3+Wz+TIN53Gxfe/NmZaSQ+T+e5mG2Qz/zzrp70KEPIfXqeDw3LtwuTy7yMfDkhx2qy/FSbeQtltgtCnYEIoKmBiJk00TJ9xsxiSvIkyT2QTIIy2j/euXGRzJ+XoJz502uujHp81wLYH9UmloWcTyDtFQQ0a9JGGp6ANPW5zqDcrWb2baR1HAN1fnsHIuoMkbcy3ZaF++5A1h8if9oLfN75reJzDrfha/P0apNM7qtYdOD75QE5vaWLMDZVkDWIe//Ow2hrPOf7/p6qU21I8tRG4sbCJDivRkJFZL7tYTRaOFhk4mdrxC3uvSzkZEr4HUk+4L/1q1Ah360exkKbP2XNg5D1Q/5szCB9JYtJbHW8Zo1Xeham2RH+rjrmdu7lKp0nM4Rg0cFcgbQHzqz3lWDDAM/Oiic6mbT38ajmJYi4ENl+P5mX6+Uo5+UK8+ef/XMhzZ+1KGcexDrYZwBclV0DUp6uKBFGTtz777F9SsMmrWXmNlB/POdppjn/pc3i2ZqK2Oj2bUiHH1TZ7S1cn48hDUSEtm6qkIyY2TjJ9yItxq8Styjcm83sNq9MsTjiHJTvS3SQlg0uuPeH5B/H9z73x5LHL5rZY14oxkmuRJr4BtRTTBd7XnbIxlY/Rp6uQrHksUp5CS/XZ/37YPnBwv6/ifWHyM8bKBLzx++NJH/Bop9RlpDjnR5OzIU51K9XmVJwH4t0av2YKRaDkWXNnzBvDuqR9ZSetCjD1DSKFmXck+TXet5XhpDjKx5O5Uo9rQVgsdPz/kjeBqB6bQSAI0muRmFyNEEsjF7t36ssjs6HyDdx+qDcOdk9/RIwXxK6E8nnUc4fXxmPYydbAnkBCvNnvjzJpynf7oVi3MOrM5U9ZH4x00zS2AC5CYi0o8gBSLJVnU7eO54TC+hrxqbo/H7aa1aVDuZCUnUheMjx1y5fdAhfweoT/ELrxAzSUf8buCVg4aPvZNdWsujwl9GOvZPB6rR0i0HVeMX993KA9J9qAVgsLNkN6bwroH4Hr82jkKruh5MvBLm857czkCb4VdnsKrTMJ0luMbOpHeTYc2Be6QhOP3kxzlfbE2mBz1ko3xeLlu5nAL7k1yI+eQezjv1fduJdHeps9pVv7BVbulRe8J5neuyfciLSEPkgW50vpY1jo0P4FTN7wBNqnMlldgrqNbuG1HRfQXI9gGsAXGNmj4cmKuOJoM9Bco9K17+vQSr4f4RkFoQMZfIiCsXnzez/mOb9jDMtWD8W1TuYOUvpIJDwcm1B2sMIqFk58wow6Rlwhn8f9oMfgt7R0PBynYRin/+6W+7FRrKHAvgLkp8ws08BxcSuWR8sjpENbX8Q0hkLxyCN0Abhfiy7G10HwPOYueTxFKSjTKtu67hUCaV2rZk9WrflBTyBWHR+3wzgq1he23+PALgLxT5GQLFT8L6o3gL0EvvkRMG6AcDJZvYEs1Mlg7xikFyHtPbgsPwWFJWyihKKwn2tma1jMcN1B6Q9e1Zh+eRrKJ+DLZ3dXLsC9CbGB/xzOW0fF4vxYyFIF8DvA3gtBi/88Odj46txpIUcN5N8KTDdNecVosu0fctNSKZTFP4JFIvbR1G9BY73xABkDAgdjVT4l9uJNputOLi89ryfkQiAaU+ct2IwO3EpEW7S/wXwBbfNo5P0J9k9TWFILsLtAF6HNNluKnwWg4JHANiMtMfnJIoMjf1B6xCm0g8AfMNlHfffPjDnU8OLoaGZBnnvu84Q+VImzrL9WzN7EsUywNcjTSlo6+yr8BI96d+n0tIrxIeRRrG3o9gFelCisn80b+lI/jaaOdNgqRCm4V0ArvXWdaAZqSNInd+VAN6TXRt2YprzrUjuynyA5IOYfupL04RSyd2j0cruDeAQpALZ1O5xcXbv1Wa20VuaKBRnYvmc3hPm4SSA9b7IakYfqyoxGew4pA2Wht1ODDt8DMD/ADg+S6gJpsU569CeRoxO5k8AfKfnGgC8Dckb00Qrm8u6GcD66G94ZdsDSVZg+LV/lMsRAO8zs1sH6fjmxF42Z6C9gau2iQGaWNo3hrT79FpLpwHmA2enofoOaFWIVuVfzOx5FjMT43oUyEEOtuiV9csA3mpmWzF9esi7kEytKkselxLhDQuzZyuAd5vZFZ6ujbRqRnINgJuRbcE9RBimt1jPIfn7P2JmWzP3riH1b+5BOtijrS0Mu0iFcq2Zfd3NEbo9vg+Au5HcklUPeQBmyvoUgPPN7AKgcK+6rIZkJ/8mhvOc39743gzgQ2Z2Z1OaPxgFcD6G+xTwCQA/AvCvSCc73gtMs7tjn//TkOb8t0kH6YyBzSwOnYv+xqlI5s8gbAPwQ6TzD64ws59lI8/drMKvQzohZ5h5FOmshSvMLGZ7Nlr4gdQCHIfhtPuJNBT+IIAHslHVmF5A/24+l3410mESbfVzol/xU0tHLMV743MNgL1qvr+L5M590MwenHphT4HI3nUggFfUfNdisw3AwwDuN7OngamZsdbwIpzlBVs6kGIp8ssiK3tmxrZBLJQeNts/iCHx2C9n7ht9xuVCxGm2ZrqB94ecfbXgAsraBqXzVAghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCHELxn/D54vxSaf6rvAAAAAAElFTkSuQmCC">
 <link rel="apple-touch-icon" href="data:image/png;base64,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">
@@ -3789,9 +3792,15 @@ window.ALL_OUT_CONFIG = {
 
   const CONFIG = window.ALL_OUT_CONFIG || {};
   const divisions = {
-    D14: { id:'D14', label:'DUPR 14', accent:'14', capacity:16, confirmed:0, underReview:0, teamLimit:14.00, playerLimit:3.99 },
-    D16: { id:'D16', label:'DUPR 16', accent:'16', capacity:12, confirmed:0, underReview:0, teamLimit:16.00, playerLimit:4.49 }
+    // D12 is built but closed: it is not offered until the organizer confirms its capacity, fee and payment window
+    // and the backend division is opened. Set enabled:true here at that point (capacity is read from the backend).
+    // nrEquivalent is what a player with no rating (NR) counts as in the team total. It is never shown as a rating.
+    D12: { id:'D12', label:'DUPR 12', accent:'12', capacity:0, confirmed:0, underReview:0, teamLimit:12.00, playerLimit:3.49, nrEquivalent:3.00, enabled:false },
+    D14: { id:'D14', label:'DUPR 14', accent:'14', capacity:16, confirmed:0, underReview:0, teamLimit:14.00, playerLimit:3.99, nrEquivalent:3.50, enabled:true },
+    D16: { id:'D16', label:'DUPR 16', accent:'16', capacity:12, confirmed:0, underReview:0, teamLimit:16.00, playerLimit:4.49, nrEquivalent:4.00, enabled:true }
   };
+  const isOpenDivision = id => Object.hasOwn(divisions, id) && divisions[id].enabled === true;
+  const openDivisions = () => Object.values(divisions).filter(d => d.enabled === true);
 
   const playerTemplates = [
     { slot:'Player 1', gender:'' },
@@ -3801,12 +3810,12 @@ window.ALL_OUT_CONFIG = {
   ];
 
   const makePlayers = () => playerTemplates.map((p, index) => ({
-    id:index + 1, slot:p.slot, gender:p.gender, fullName:'', email:'', mobile:'', duprId:'', duprRating:'', shirtSize:'', captain:false
+    id:index + 1, slot:p.slot, gender:p.gender, fullName:'', email:'', mobile:'', duprId:'', duprRating:'', isNr:false, shirtSize:'', captain:false
   }));
 
   const state = { step:1, divisionId:'', teamName:'', teamLogoDataUrl:'', teamLogoName:'', players:makePlayers(), acknowledged:false, consented:false, openPlayerId:1 };
   const requestedDivision=new URLSearchParams(window.location.search).get('division');
-  if(requestedDivision && ['D14','D16'].includes(requestedDivision)) state.divisionId=requestedDivision;
+  if(requestedDivision && isOpenDivision(requestedDivision)) state.divisionId=requestedDivision;
 
   const $ = (sel, root=document) => root.querySelector(sel);
   const $$ = (sel, root=document) => [...root.querySelectorAll(sel)];
@@ -3832,7 +3841,26 @@ window.ALL_OUT_CONFIG = {
   // Player-facing availability deducts Confirmed teams only.
   const publicRemaining = d => Math.max(0, d.capacity - Math.max(0, Number(d.confirmed) || 0));
   const publicConfirmedPct = d => clamp((Math.max(0, Number(d.confirmed) || 0) / d.capacity) * 100, 0, 100);
-  const teamDupr = () => state.players.reduce((sum,p) => sum + (Number.parseFloat(p.duprRating) || 0), 0);
+  // Ratings are compared as whole hundredths (3.49 -> 349) so limits are exact. Text with more than two decimals,
+  // zero, or anything above 9 is rejected; nothing is ever rounded into eligibility.
+  const RATING_TEXT = /^[0-9]+([.][0-9]{1,2})?$/;
+  const toHundredths = text => {
+    const t = String(text ?? '').trim();
+    if(!RATING_TEXT.test(t)) return null;
+    const [whole, frac=''] = t.split('.');
+    const h = Number(whole) * 100 + Number((frac + '00').slice(0,2));
+    return h > 0 && h <= 900 ? h : null;
+  };
+  const limitHundredths = n => Math.round(n * 100);
+  const formatHundredths = h => (h / 100).toFixed(2);
+  // What a player counts as in the team total: the typed rating, or the division's NR equivalent.
+  const playerHundredths = p => {
+    if(!p.isNr) return toHundredths(p.duprRating);
+    const d = division();
+    return d ? limitHundredths(d.nrEquivalent) : null;
+  };
+  const teamHundredths = () => state.players.reduce((sum,p) => sum + (playerHundredths(p) || 0), 0);
+  const teamDupr = () => teamHundredths() / 100;
   const MAX_TEAM_LOGO_BYTES = 2 * 1024 * 1024;
   function renderTeamLogo(){
     const img=$('#teamLogoImage'), placeholder=$('#teamLogoPlaceholder'), remove=$('#removeTeamLogo'), error=$('#teamLogoError');
@@ -3897,7 +3925,11 @@ window.ALL_OUT_CONFIG = {
   const normalizeDuprId = v => String(v ?? '').toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,20);
   const validDuprId = v => /^[A-Z0-9]{4,20}$/.test(String(v ?? '').trim());
   const duplicateDuprId = (player) => validDuprId(player.duprId) && state.players.some(other => other.id !== player.id && other.duprId === player.duprId);
-  const validRating = v => Number.isFinite(Number.parseFloat(v)) && Number.parseFloat(v) >= 0;
+  const ratingIssue = p => {
+    if(p.isNr || toHundredths(p.duprRating) !== null) return '';
+    if(/^[0-9]+[.][0-9]{3,}$/.test(String(p.duprRating ?? '').trim())) return 'DUPR rating can have at most 2 decimal places.';
+    return 'Enter a valid DUPR rating (for example 3.45), or tick NR if the player has no rating.';
+  };
   const validGender = v => v === 'Male' || v === 'Female';
   function playerCompletionIssue(p){
     if(!validGender(p.gender)) return 'Select gender.';
@@ -3906,7 +3938,7 @@ window.ALL_OUT_CONFIG = {
     if(!validMobile(p.mobile)) return 'Enter a valid Philippine mobile number in the format (09##) ###-####.';
     if(!validDuprId(p.duprId)) return 'Enter a valid alphanumeric DUPR ID.';
     if(duplicateDuprId(p)) return 'This DUPR ID is already assigned to another player on this roster.';
-    if(!validRating(p.duprRating)) return 'Enter a valid DUPR rating.';
+    if(ratingIssue(p)) return ratingIssue(p);
     if(!p.shirtSize.trim()) return 'Select a tournament shirt size.';
     return '';
   }
@@ -3919,6 +3951,7 @@ window.ALL_OUT_CONFIG = {
     if(issue.includes('mobile')) return 'Mobile invalid';
     if(issue.includes('already assigned')) return 'Duplicate DUPR ID';
     if(issue.includes('DUPR ID')) return 'DUPR ID invalid';
+    if(issue.includes('2 decimal')) return 'Rating: max 2 decimals';
     if(issue.includes('DUPR rating')) return 'DUPR rating required';
     if(issue.includes('shirt size')) return 'Shirt size required';
     return 'Incomplete';
@@ -3941,19 +3974,19 @@ window.ALL_OUT_CONFIG = {
     if(counts.male > 2) reasons.push(`Your roster has ${counts.male} men. ALL-OUT requires exactly 2 men and 2 women.`);
     if(counts.female > 2) reasons.push(`Your roster has ${counts.female} women. ALL-OUT requires exactly 2 men and 2 women.`);
     if(state.players.every(p=>validGender(p.gender)) && !genderCompositionValid()) reasons.push(`Your roster must contain exactly 2 men and 2 women.`);
-    const ratings = state.players.map(p => Number.parseFloat(p.duprRating));
-    const ratingsComplete = ratings.every(Number.isFinite);
+    const ratings = state.players.map(playerHundredths);
+    const ratingsComplete = ratings.every(h => h !== null);
     state.players.forEach((p,i) => {
-      const r = Number.parseFloat(p.duprRating);
-      if(Number.isFinite(r) && r > d.playerLimit + 1e-9) reasons.push(`${p.fullName.trim() || p.slot} is ${r.toFixed(2)}; max individual DUPR is ${d.playerLimit.toFixed(2)}.`);
+      const h = ratings[i];
+      if(h !== null && h > limitHundredths(d.playerLimit)) reasons.push(`${p.fullName.trim() || p.slot} is ${formatHundredths(h)}; max individual DUPR is ${d.playerLimit.toFixed(2)}.`);
     });
-    const total = teamDupr();
-    if(ratingsComplete && total > d.teamLimit + 1e-9) reasons.push(`Team DUPR is ${total.toFixed(2)}; maximum is ${d.teamLimit.toFixed(2)}.`);
+    const total = teamHundredths();
+    if(ratingsComplete && total > limitHundredths(d.teamLimit)) reasons.push(`Team DUPR is ${formatHundredths(total)}; maximum is ${d.teamLimit.toFixed(2)}.`);
     return {ok:ratingsComplete && genderCompositionValid() && reasons.length===0, complete:ratingsComplete && state.players.every(p=>validGender(p.gender)), reasons};
   }
 
   function renderPublicDivisions(){
-    $('#publicDivisionGrid').innerHTML = Object.values(divisions).map(d => {
+    $('#publicDivisionGrid').innerHTML = openDivisions().map(d => {
       const status = derivedStatus(d);
       const pct = publicConfirmedPct(d);
       const chipClass = status === 'Waitlist Only' ? 'waitlist' : '';
@@ -3980,6 +4013,7 @@ window.ALL_OUT_CONFIG = {
     }).join('');
 
     $$('[data-register-division]').forEach(btn=>btn.addEventListener('click',()=>{
+      if(!isOpenDivision(btn.dataset.registerDivision)) return;
       state.divisionId=btn.dataset.registerDivision;
       document.body.classList.add('division-selected');
       renderPublicDivisions();
@@ -3991,7 +4025,7 @@ window.ALL_OUT_CONFIG = {
   }
 
   function renderDivisionPicker(){
-    $('#divisionPicker').innerHTML = Object.values(divisions).map(d => {
+    $('#divisionPicker').innerHTML = openDivisions().map(d => {
       const status = derivedStatus(d);
       return `<button class="division-option ${state.divisionId===d.id?'selected':''}" type="button" data-division="${d.id}">
         <div class="option-title option-title-dupr dupr-uniform-title"><img class="dupr-wordmark" src="../assets/brand/dupr-wordmark.png" alt="DUPR official wordmark"><strong>${d.accent}</strong></div>
@@ -4001,6 +4035,7 @@ window.ALL_OUT_CONFIG = {
       </button>`;
     }).join('');
     $$('.division-option').forEach(btn => btn.addEventListener('click',() => {
+      if(!isOpenDivision(btn.dataset.division)) return;
       state.divisionId = btn.dataset.division;
       renderDivisionPicker(); updateAll();
     }));
@@ -4032,7 +4067,9 @@ window.ALL_OUT_CONFIG = {
           <label>Email address<input data-field="email" data-player="${p.id}" type="email" autocomplete="email" value="${escapeHTML(p.email)}" placeholder="player@email.com" /></label>
           <label>Mobile number<input data-field="mobile" data-player="${p.id}" type="tel" inputmode="tel" autocomplete="tel" maxlength="15" pattern="\(09[0-9]{2}\) [0-9]{3}-[0-9]{4}" value="${escapeHTML(p.mobile)}" placeholder="(0917) 123-4567" aria-describedby="mobile-format-${p.id}" /><small id="mobile-format-${p.id}" class="field-hint">Format: (09##) ###-####</small></label>
           <div class="field-stack"><div class="field-label-row"><label for="dupr-id-${p.id}">DUPR ID</label><button class="field-help-btn" type="button" data-open-dupr-help>Where do I find it?</button></div><input id="dupr-id-${p.id}" data-field="duprId" data-player="${p.id}" type="text" inputmode="text" autocomplete="off" maxlength="20" pattern="[A-Za-z0-9]{4,20}" value="${escapeHTML(p.duprId)}" placeholder="QNZ075" aria-describedby="dupr-id-format-${p.id}" /><small id="dupr-id-format-${p.id}" class="field-hint">Alphanumeric DUPR ID · e.g. QNZ075</small></div>
-          <label>DUPR rating<input data-field="duprRating" data-player="${p.id}" type="number" inputmode="decimal" min="0" max="9" step="0.01" value="${escapeHTML(p.duprRating)}" placeholder="0.00" /></label>
+          <label>DUPR rating<input data-field="duprRating" data-player="${p.id}" type="text" inputmode="decimal" autocomplete="off" maxlength="5" value="${escapeHTML(p.duprRating)}" placeholder="${p.isNr?'NR':'0.00'}" ${p.isNr?'disabled':''} aria-describedby="rating-note-${p.id}" /></label>
+          <label class="captain-select nr-select"><input data-nr="${p.id}" type="checkbox" ${p.isNr?'checked':''}/><span><strong>NR (no DUPR rating)</strong><br/>A DUPR ID is still required. The organizer verifies NR before your team is approved.</span></label>
+          <small id="rating-note-${p.id}" class="field-hint" data-nr-note="${p.id}"></small>
           <div class="shirt-row">
             <label class="shirt-size-field"><span>Official tournament shirt size</span><select data-field="shirtSize" data-player="${p.id}" aria-label="Shirt size for ${escapeHTML(p.fullName || p.slot)}"><option value="">Select size</option>${['2XS','XS','S','M','L','XL','2XL','3XL'].map(size=>`<option value="${size}" ${p.shirtSize===size?'selected':''}>${size}</option>`).join('')}</select></label>
             <div class="size-chart-launch-wrap"><span>Size guide</span><button class="size-chart-launch" type="button" data-open-size-chart><span><strong>View Size Chart</strong><small>Chest width & length · inches</small></span><span class="chart-arrow">↗</span></button></div>
@@ -4083,6 +4120,10 @@ window.ALL_OUT_CONFIG = {
           const cleaned = normalizeDuprId(e.target.value);
           e.target.value = cleaned;
           p.duprId = cleaned;
+        } else if(field === 'duprRating'){
+          const cleaned = e.target.value.replace(/[^0-9.]/g,'');
+          e.target.value = cleaned;
+          p.duprRating = cleaned;
         } else {
           p[field] = e.target.value;
         }
@@ -4096,6 +4137,13 @@ window.ALL_OUT_CONFIG = {
       };
       input.addEventListener(input.tagName === 'SELECT' ? 'change' : 'input', handler);
     });
+    $$('[data-nr]').forEach(input => input.addEventListener('change', e => {
+      const p = state.players.find(x => x.id === Number(e.target.dataset.nr));
+      p.isNr = e.target.checked;
+      if(p.isNr) p.duprRating = '';
+      state.openPlayerId = p.id;
+      renderRoster(); updateAll();
+    }));
     $$('[data-captain]').forEach(input => input.addEventListener('change', e => {
       state.players.forEach(p => p.captain = p.id === Number(e.target.dataset.captain));
       renderRoster(); updateAll();
@@ -4118,13 +4166,15 @@ window.ALL_OUT_CONFIG = {
     const el = $('#eligibilityState'); el.className='eligibility-state';
     if(!d){ el.classList.add('neutral'); el.textContent='Select a division first'; return; }
     if(!state.players.every(p=>validGender(p.gender))){ el.classList.add('neutral'); el.textContent='Complete gender + DUPR details'; }
-    else if(!e.complete){ el.classList.add('neutral'); el.textContent='Add all 4 DUPR ratings'; }
+    else if(!e.complete){ el.classList.add('neutral'); el.textContent='Add all 4 DUPR ratings (or NR)'; }
     else if(e.ok){ el.classList.add('good'); el.textContent='✓ DUPR limits satisfied'; }
     else{ el.classList.add('bad'); el.textContent='Eligibility issue detected'; }
     state.players.forEach(p => {
+      const note = $(`[data-nr-note="${p.id}"]`);
+      if(note) note.textContent = p.isNr ? `NR counts as ${formatHundredths(limitHundredths(d.nrEquivalent))} toward the ${d.label} team total.` : 'Up to 2 decimals, for example 3.45.';
       const error = $(`[data-error-player="${p.id}"]`); if(!error) return;
-      const r = Number.parseFloat(p.duprRating);
-      if(Number.isFinite(r) && r > d.playerLimit + 1e-9){ error.textContent=`${p.slot} exceeds the ${d.label} individual limit of ${d.playerLimit.toFixed(2)}.`; error.classList.add('show'); }
+      const h = playerHundredths(p);
+      if(h !== null && h > limitHundredths(d.playerLimit)){ error.textContent=`${p.slot} exceeds the ${d.label} individual limit of ${d.playerLimit.toFixed(2)}.`; error.classList.add('show'); }
       else{ error.textContent=''; error.classList.remove('show'); }
     });
   }
@@ -4166,7 +4216,7 @@ window.ALL_OUT_CONFIG = {
     const d=division(); const cap=captain();
     $('#reviewStack').innerHTML = `
       <article class="review-card"><div class="review-card-head"><h4>Team & Division</h4><button class="edit-link" type="button" data-go-step="2">Edit</button></div>${state.teamLogoDataUrl?`<div class="review-team-logo"><img src="${state.teamLogoDataUrl}" alt="${escapeHTML(state.teamName)} team logo"><div><span>TEAM LOGO</span><strong>${escapeHTML(state.teamLogoName||'Uploaded')}</strong><small>Optional asset supplied</small></div></div>`:''}<div class="review-grid"><div class="review-item"><span>TEAM</span><strong>${escapeHTML(state.teamName)}</strong></div><div class="review-item"><span>DIVISION</span><strong>${d.label}</strong></div><div class="review-item"><span>TEAM DUPR</span><strong class="rating-number">${teamDupr().toFixed(2)} / ${d.teamLimit.toFixed(2)}</strong></div><div class="review-item"><span>CAPTAIN</span><strong>${escapeHTML(cap?.fullName || '—')}</strong></div></div></article>
-      <article class="review-card"><div class="review-card-head"><h4>Roster</h4><button class="edit-link" type="button" data-go-step="3">Edit</button></div><div class="review-grid">${state.players.map(p=>`<div class="review-item"><span>${escapeHTML((p.slot+' · '+p.gender).toUpperCase())}</span><strong>${escapeHTML(p.fullName)}${p.captain?' · Captain':''}</strong><span>DUPR <b class="rating-number rating-number-inline">${Number.parseFloat(p.duprRating).toFixed(2)}</b> · ${escapeHTML(p.shirtSize)}</span></div>`).join('')}</div></article>
+      <article class="review-card"><div class="review-card-head"><h4>Roster</h4><button class="edit-link" type="button" data-go-step="3">Edit</button></div><div class="review-grid">${state.players.map(p=>`<div class="review-item"><span>${escapeHTML((p.slot+' · '+p.gender).toUpperCase())}</span><strong>${escapeHTML(p.fullName)}${p.captain?' · Captain':''}</strong><span>${p.isNr?`DUPR <b class="rating-number rating-number-inline">NR</b> (counts as ${formatHundredths(limitHundredths(d.nrEquivalent))}) · DUPR ID ${escapeHTML(p.duprId)}`:`DUPR <b class="rating-number rating-number-inline">${formatHundredths(playerHundredths(p))}</b>`} · ${escapeHTML(p.shirtSize)}</span></div>`).join('')}</div>${state.players.some(p=>p.isNr)?'<p class="field-hint">NR players are shown as NR. The organizer verifies NR before your team is approved for payment.</p>':''}</article>
       <article class="review-card"><div class="review-card-head"><h4>Payment</h4></div><div class="review-grid"><div class="review-item"><span>REGISTRATION FEE</span><strong>${money.format(7000)}</strong></div><div class="review-item"><span>WHEN TO PAY</span><strong>After eligibility approval</strong></div></div></article>`;
     $$('[data-go-step]').forEach(btn=>btn.addEventListener('click',()=>goStep(Number(btn.dataset.goStep))));
   }
@@ -4302,7 +4352,7 @@ window.ALL_OUT_CONFIG = {
   }
 
   function payload(){
-    return { eventSlug:CONFIG.eventSlug || 'all-out-pickleball-league-2026', divisionId:state.divisionId, teamName:state.teamName.trim(), teamLogo:{optional:true,fileName:state.teamLogoName||'',dataUrl:state.teamLogoDataUrl||''}, players:state.players.map(p=>({slot:p.slot,gender:p.gender,fullName:p.fullName.trim(),email:p.email.trim(),mobile:p.mobile.trim(),duprId:p.duprId.trim(),submittedDupr:Number.parseFloat(p.duprRating),shirtSize:p.shirtSize.trim(),captain:p.captain})), rulesVersion:'2.0', acknowledgedAt:new Date().toISOString(), teammateConsentAt:new Date().toISOString() };
+    return { eventSlug:CONFIG.eventSlug || 'all-out-pickleball-league-2026', divisionId:state.divisionId, teamName:state.teamName.trim(), teamLogo:{optional:true,fileName:state.teamLogoName||'',dataUrl:state.teamLogoDataUrl||''}, players:state.players.map(p=>({slot:p.slot,gender:p.gender,fullName:p.fullName.trim(),email:p.email.trim(),mobile:p.mobile.trim(),duprId:p.duprId.trim(),isNr:p.isNr===true,submittedDupr:p.isNr?null:p.duprRating.trim(),shirtSize:p.shirtSize.trim(),captain:p.captain})), rulesVersion:'2.0', acknowledgedAt:new Date().toISOString(), teammateConsentAt:new Date().toISOString() };
   }
 
   async function submitRegistration(){
@@ -4392,7 +4442,8 @@ window.ALL_OUT_CONFIG = {
     const incoming=restored?.state||{};
     Object.assign(state,incoming);
     const defaults=makePlayers();
-    state.players=(incoming.players||defaults).map((p,i)=>({...defaults[i],...p,id:i+1,slot:p.slot||`Player ${i+1}`,mobile:formatMobile(p.mobile)}));
+    state.players=(incoming.players||defaults).map((p,i)=>({...defaults[i],...p,id:i+1,slot:p.slot||`Player ${i+1}`,mobile:formatMobile(p.mobile),isNr:p.isNr===true,duprRating:p.isNr===true?'':String(p.duprRating??'')}));
+    if(!isOpenDivision(state.divisionId)) state.divisionId='';
     while(state.players.length<4){const i=state.players.length;state.players.push(defaults[i]);}
     state.players=state.players.slice(0,4);
     $('#teamName').value=state.teamName||'';
