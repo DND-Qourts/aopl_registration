@@ -3795,9 +3795,9 @@ window.ALL_OUT_CONFIG = {
     // D12 is built but closed: it is not offered until the organizer confirms its capacity, fee and payment window
     // and the backend division is opened. Set enabled:true here at that point (capacity is read from the backend).
     // nrEquivalent is what a player with no rating (NR) counts as in the team total. It is never shown as a rating.
-    D12: { id:'D12', label:'DUPR 12', accent:'12', capacity:0, confirmed:0, underReview:0, teamLimit:12.00, playerLimit:3.49, nrEquivalent:3.00, enabled:false },
+    D12: { id:'D12', label:'DUPR 12', accent:'12', capacity:8, confirmed:0, underReview:0, teamLimit:12.00, playerLimit:3.49, nrEquivalent:3.00, enabled:false },
     D14: { id:'D14', label:'DUPR 14', accent:'14', capacity:16, confirmed:0, underReview:0, teamLimit:14.00, playerLimit:3.99, nrEquivalent:3.50, enabled:true },
-    D16: { id:'D16', label:'DUPR 16', accent:'16', capacity:12, confirmed:0, underReview:0, teamLimit:16.00, playerLimit:4.49, nrEquivalent:4.00, enabled:true }
+    D16: { id:'D16', label:'DUPR 16', accent:'16', capacity:4, confirmed:0, underReview:0, teamLimit:16.00, playerLimit:4.49, nrEquivalent:4.00, enabled:true }
   };
   const isOpenDivision = id => Object.hasOwn(divisions, id) && divisions[id].enabled === true;
   const openDivisions = () => Object.values(divisions).filter(d => d.enabled === true);

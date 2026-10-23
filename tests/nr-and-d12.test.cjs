@@ -36,7 +36,7 @@ test('DUPR 12 is not offered and cannot be reached by link', async () => {
 
 test('DUPR 12 appearing in the capacity feed does not open it', async () => {
   const { page, context } = await openRegistration(browser, base, {
-    capacity: [{ division_id: 'D12', capacity: 8, confirmed: 0, under_review: 0 }, { division_id: 'D14', capacity: 16, confirmed: 0, under_review: 0 }, { division_id: 'D16', capacity: 12, confirmed: 0, under_review: 0 }]
+    capacity: [{ division_id: 'D12', capacity: 8, confirmed: 0, under_review: 0 }, { division_id: 'D14', capacity: 16, confirmed: 0, under_review: 0 }, { division_id: 'D16', capacity: 4, confirmed: 0, under_review: 0 }]
   });
   await page.waitForFunction(() => /Live capacity/.test(document.querySelector('#availabilitySource').textContent));
   assert.strictEqual(await page.locator('#publicDivisionGrid .division-card').count(), 2);

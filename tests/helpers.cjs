@@ -28,7 +28,7 @@ async function launch() {
 
 const CAPACITY = [
   { division_id: 'D14', capacity: 16, confirmed: 0, under_review: 0 },
-  { division_id: 'D16', capacity: 12, confirmed: 0, under_review: 0 }
+  { division_id: 'D16', capacity: 4, confirmed: 0, under_review: 0 }
 ];
 
 /**
