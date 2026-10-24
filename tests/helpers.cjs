@@ -35,8 +35,9 @@ const CAPACITY = [
  * Opens the registration page with all backend traffic mocked.
  * `functions` maps an Edge Function name (submit-registration, save-draft, ...) to a response body or function(payload).
  * Every call to a function is recorded in `calls`; every other external request is aborted and recorded in `blocked`.
+ * `pagePath` opens another page of the site (default: the registration page).
  */
-async function openRegistration(browser, baseUrl, { query = '', functions = {}, capacity = CAPACITY } = {}) {
+async function openRegistration(browser, baseUrl, { query = '', functions = {}, capacity = CAPACITY, pagePath = '/register/' } = {}) {
   const context = await browser.newContext({ viewport: { width: 1280, height: 1000 } });
   const page = await context.newPage();
   page.setDefaultTimeout(5000);
@@ -62,7 +63,7 @@ async function openRegistration(browser, baseUrl, { query = '', functions = {}, 
     blocked.push(route.request().url());
     return route.abort();
   });
-  await page.goto(baseUrl + '/register/' + query);
+  await page.goto(baseUrl + pagePath + query);
   return { page, context, blocked, calls, errors };
 }
 
