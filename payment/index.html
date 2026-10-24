@@ -208,7 +208,7 @@ footer{margin-top:34px;padding-top:18px;border-top:1px solid rgba(255,255,255,.0
       <div class="amount-box">
         <small>Amount due</small>
         <div class="amount">₱7,000</div>
-        <div class="due"><span>24-hour payment window</span><b>Due after verification</b></div>
+        <div class="due"><span>Payment deadline</span><b>No deadline</b></div>
       </div>
     </div>
 
@@ -363,7 +363,7 @@ footer{margin-top:34px;padding-top:18px;border-top:1px solid rgba(255,255,255,.0
       PAYMENT_ACCESS_NOT_FOUND:'We could not match that registration reference and registered roster email.',
       PAYMENT_NOT_AVAILABLE:'Payment is not currently available for this registration.',
       PAYMENT_WINDOW_NOT_ACTIVE:'The payment window is not currently active.',
-      PAYMENT_WINDOW_EXPIRED:'The 24-hour payment window has expired. Please contact the organizer.',
+      PAYMENT_WINDOW_EXPIRED:'Payment for this registration is on hold. The organizer will reopen payment or contact you.',
       OTP_RATE_LIMITED:'A code was sent recently. Please wait a minute before requesting another.',
       OTP_INVALID:'The verification code is incorrect.',
       OTP_EXPIRED:'The verification code has expired. Request a new code.',
@@ -448,14 +448,13 @@ footer{margin-top:34px;padding-top:18px;border-top:1px solid rgba(255,255,255,.0
   otp.addEventListener('keydown',e=>{ if(e.key==='Enter') verifyOtp.click(); });
 
   function money(v){return '₱'+Number(v||0).toLocaleString('en-PH',{minimumFractionDigits:2,maximumFractionDigits:2});}
-  function formatDue(v){try{return new Intl.DateTimeFormat('en-PH',{dateStyle:'medium',timeStyle:'short',timeZone:'Asia/Manila'}).format(new Date(v));}catch{return v||'—';}}
   function escapeHtml(value){return String(value??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
 
   function hydratePayment(r){
     const amount=Number(r.amount||0);
     const head=paymentStage.querySelector('.payment-head h1'); if(head) head.innerHTML=`Pay ${money(amount)}.<br>Submit your proof.`;
     const amountEl=paymentStage.querySelector('.amount'); if(amountEl) amountEl.textContent=money(amount);
-    const dueEl=paymentStage.querySelector('.due b'); if(dueEl) dueEl.textContent=`Due ${formatDue(r.dueAt)}`;
+    const dueEl=paymentStage.querySelector('.due b'); if(dueEl) dueEl.textContent='No deadline';
     const strip=[...paymentStage.querySelectorAll('.strip > div b')];
     if(strip[0])strip[0].textContent=r.reference||'—';
     if(strip[1])strip[1].textContent=r.teamName||'—';

@@ -1,4 +1,1 @@
-Thumbs.db
-.DS_Store
-*.tmp
-*.bak
+node_modules/

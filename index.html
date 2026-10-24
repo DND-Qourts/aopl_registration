@@ -6178,7 +6178,7 @@ dialog [data-rating-value],
 <h4>What happens next?</h4>
 <ol>
 <li><span>1</span><p><strong>Registration &amp; DUPR review</strong><br/>Organizers validate the roster and eligibility.</p></li>
-<li><span>2</span><p><strong>Payment request</strong><br/>If approved for payment, the captain receives a 24-hour payment window.</p></li>
+<li><span>2</span><p><strong>Payment request</strong><br/>If approved for payment, the captain receives a payment request. There is no payment deadline.</p></li>
 <li><span>3</span><p><strong>Confirmation</strong><br/>Once payment is verified, the team becomes Confirmed automatically.</p></li>
 </ol>
 </div>
@@ -6570,7 +6570,7 @@ window.ALL_OUT_CONFIG = {
   const CONFIG = window.ALL_OUT_CONFIG || {};
   const divisions = {
     D14: { id:'D14', label:'DUPR 14', accent:'14', capacity:16, confirmed:0, underReview:0, teamLimit:14.00, playerLimit:3.99 },
-    D16: { id:'D16', label:'DUPR 16', accent:'16', capacity:12, confirmed:0, underReview:0, teamLimit:16.00, playerLimit:4.49 }
+    D16: { id:'D16', label:'DUPR 16', accent:'16', capacity:4, confirmed:0, underReview:0, teamLimit:16.00, playerLimit:4.49 }
   };
 
   const playerTemplates = [
@@ -6980,8 +6980,8 @@ window.ALL_OUT_CONFIG = {
     const s=String(r.registrationStatus||r.status||'').toLowerCase(), p=String(r.paymentStatus||'').toLowerCase();
     if(s.includes('action'))return ['Correction required',r.actionRequiredMessage||'Review the organizer’s requested correction and submit the updated information within the allowed correction window.'];
     if(s.includes('wait'))return ['No payment required yet','Your team remains in the eligible waitlist queue. You will be notified automatically if a slot becomes available.'];
-    if(s.includes('payment overdue')||p.includes('overdue'))return ['Payment deadline needs attention','The payment window has passed. Admin will decide whether to extend the deadline, cancel the promotion, or release the slot.'];
-    if(s.includes('approved for payment')||p.includes('requested'))return ['Complete payment',r.paymentDueAt?`Payment is due by ${formatTrackDate(r.paymentDueAt)}.`:'Complete payment within the 24-hour payment window shown in your payment request.'];
+    if(s.includes('payment overdue')||p.includes('overdue'))return ['Payment needs organizer attention','This registration was marked overdue under the earlier payment rules. The organizer will reopen payment or contact you. Your reserved slot is still held.'];
+    if(s.includes('approved for payment')||p.includes('requested'))return ['Complete payment','Use the secure payment link in your payment request. No payment deadline. Your reserved slot stays held while payment is pending.'];
     if(s.includes('confirmed'))return ['You’re confirmed','No registration action is required. Watch for official event announcements from the Organizer.'];
     if(s.includes('reject')||s.includes('cancel')||s.includes('withdraw'))return ['Registration closed',r.statusNote||'Contact the Organizer if you need clarification about this registration.'];
     return ['No action required','Your roster and DUPR eligibility are being reviewed. Payment is not due unless your registration is approved for payment.'];
@@ -6994,7 +6994,7 @@ window.ALL_OUT_CONFIG = {
     const items=[
       {title:'Registration submitted',detail:formatTrackDate(r.submittedAt),state:'done'},
       {title:'Roster & DUPR review',detail:action?'Correction required':wait?'Reviewed while waitlisted':reviewDone?'Eligibility approved':'Review in progress',state:action?'current':reviewDone||wait?'done':'current'},
-      {title:'Payment request',detail:wait?'Starts only after promotion':paymentStage?(r.paymentDueAt?`Due ${formatTrackDate(r.paymentDueAt)}`:'Payment stage opened'):'Not requested yet',state:paymentStage?'done':'pending'},
+      {title:'Payment request',detail:wait?'Starts only after promotion':paymentStage?'Payment stage opened · no deadline':'Not requested yet',state:paymentStage?'done':'pending'},
       {title:'Team confirmed',detail:confirmed?'Payment verified · registration confirmed':'Pending',state:confirmed?'done':'pending'}
     ];
     $('#trackTimeline').innerHTML=items.map((x,i)=>`<div class="track-timeline-row ${x.state}"><div class="track-dot">${x.state==='done'?'✓':i+1}</div><div class="track-timeline-content"><strong>${escapeHTML(x.title)}</strong><span>${escapeHTML(x.detail)}</span></div></div>`).join('');
@@ -7006,7 +7006,7 @@ window.ALL_OUT_CONFIG = {
     const badge=$('#trackStatusBadge');badge.textContent=r.registrationStatus||r.status||'Under Review';badge.className='track-status-badge '+registrationBadgeClass(badge.textContent);
     $('#trackRegistrationStatus').textContent=r.registrationStatus||r.status||'Under Review';$('#trackSubmittedAt').textContent=`Submitted ${formatTrackDate(r.submittedAt)}`;
     $('#trackDuprStatus').textContent=r.duprStatus||'Pending Review';$('#trackDuprNote').textContent=r.duprNote||'Tournament DUPR is reviewed before payment is requested.';
-    $('#trackPaymentStatus').textContent=r.paymentStatus||'Not Requested';$('#trackPaymentNote').textContent=r.paymentDueAt?`Due ${formatTrackDate(r.paymentDueAt)}`:'No payment is due until eligibility review is approved.';
+    $('#trackPaymentStatus').textContent=r.paymentStatus||'Not Requested';$('#trackPaymentNote').textContent=/approved for payment/i.test(r.registrationStatus||r.status||'')?'No payment deadline. Your reserved slot stays held while payment is pending.':'No payment is due until eligibility review is approved.';
     $('#trackWaitlistPosition').textContent=waitPos?`#${waitPos}`:'—';$('#trackWaitlistNote').textContent=waitPos?'Live eligible queue position.':'Not currently waitlisted.';
     $('#trackNextActionTitle').textContent=action[0];$('#trackNextActionCopy').textContent=action[1];renderTrackTimeline(r);
   }
@@ -7065,7 +7065,7 @@ window.ALL_OUT_CONFIG = {
       $('#successStatus').textContent=result.status || (waitlist?'Waitlisted':'Under Review');
       $('#successCopy').textContent = String(result.statusCode||'').toLowerCase()==='waitlisted' || String(result.status||'').toLowerCase()==='waitlisted'
         ? 'Your team has been added to the waitlist. No payment is due while waitlisted. Eligibility can still be reviewed while you wait.'
-        : 'Your team is now under review. No payment is due yet. If your registration and DUPR eligibility are approved, the Team Captain will receive a 24-hour payment request.';
+        : 'Your team is now under review. No payment is due yet. If your registration and DUPR eligibility are approved, the Team Captain will receive a payment request. There is no payment deadline.';
       $$('.wizard-step').forEach(s=>s.classList.remove('active')); $('#wizardFooter').classList.add('hidden'); $('.wizard-progress').classList.add('hidden'); $('#successPanel').classList.remove('hidden'); showWizardMessage('');
       $('#successPanel').scrollIntoView({behavior:'smooth',block:'start'});
       loadCapacity();
