@@ -3410,6 +3410,7 @@ dialog [data-rating-value],
               <div><span>Payment</span><strong>Not requested yet</strong></div>
             </div>
             <p class="success-copy" id="successCopy">Submission does not guarantee a tournament slot until your registration, eligibility and payment have been verified and completed.</p>
+            <p class="success-copy" id="successMailNote">We email a confirmation to every player from <b>aopl.dnd@gmail.com</b>. If it does not arrive within a few minutes, check Spam or Junk, mark it "Not spam" and add that address to your contacts.</p>
             <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><a class="primary-btn" href="../track/" id="trackFromSuccess">Track Registration</a><button class="secondary-btn" type="button" id="startAnother">Start another registration</button></div>
           </section>
 
@@ -3622,7 +3623,7 @@ dialog [data-rating-value],
           <span>6-digit verification code</span>
           <input type="text" id="resumeCode" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="000000" />
         </label>
-        <p class="resume-code-note">Use the newest code sent to this email. Codes expire after 10 minutes.</p>
+        <p class="resume-code-note">Use the newest code sent to this email. Codes expire after 10 minutes. Not in your inbox? Check Spam or Junk for aopl.dnd@gmail.com.</p>
         <div class="dialog-actions resume-code-actions">
           <button class="text-action" type="button" id="resumeBack">Use another email</button>
           <button class="primary-btn" type="button" id="resumeVerifyButton">Verify & resume</button>
